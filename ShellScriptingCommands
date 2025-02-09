@@ -1,1 +1,95 @@
-
+ubuntu@ip:~$ touch shellscript.sh
+ubuntu@ip:~$ ls
+shellscript.sh
+ubuntu@ip:~$ touch shellscript1.sh
+ubuntu@ip:~$ ls
+shellscript.sh  shellscript1.sh
+ubuntu@ip:~$ ls -ltr
+total 0
+-rw-rw-r-- 1 ubuntu ubuntu 0 Feb  8 23:51 shellscript.sh
+-rw-rw-r-- 1 ubuntu ubuntu 0 Feb  8 23:58 shellscript1.sh
+ubuntu@ip:~$ ls -l
+total 0
+-rw-rw-r-- 1 ubuntu ubuntu 0 Feb  8 23:51 shellscript.sh
+-rw-rw-r-- 1 ubuntu ubuntu 0 Feb  8 23:58 shellscript1.sh
+ubuntu@ip:~$ ls -lt
+total 0
+-rw-rw-r-- 1 ubuntu ubuntu 0 Feb  8 23:58 shellscript1.sh
+-rw-rw-r-- 1 ubuntu ubuntu 0 Feb  8 23:51 shellscript.sh
+ubuntu@ip:~$ ls -ltr
+total 0
+-rw-rw-r-- 1 ubuntu ubuntu 0 Feb  8 23:51 shellscript.sh
+-rw-rw-r-- 1 ubuntu ubuntu 0 Feb  8 23:58 shellscript1.sh
+ubuntu@ip:~$ man touch
+ubuntu@ip:~$ vim shellscript.sh
+ubuntu@ip:~$ cat shellscript.sh
+#!/bin/bash
+#
+echo "My name is Demo"
+ubuntu@ip:~$ sh shellscript.sh
+My name is Demo
+ubuntu@ip:~$ ./shellscript.sh
+-bash: ./shellscript.sh: Permission denied
+ubuntu@ip:~$ chmod 455 shellscript.sh
+ubuntu@ip:~$ ./shellscript.sh
+-bash: ./shellscript.sh: Permission denied
+ubuntu@ip:~$ chmod 544 shellscript.sh
+ubuntu@ip:~$ shellscript.sh
+shellscript.sh: command not found
+ubuntu@:~$ ./shellscript.sh
+My name is Demo
+ubuntu@ip:~$ history
+    1  touch shellscript.sh
+    2  ls
+    3  touch shellscript1.sh
+    4  ls
+    5  ls -ltr
+    6  ls -l
+    7  ls -lt
+    8  ls -ltr
+    9  man touch
+   10  vim shellscript.sh
+   11  cat shellscript.sh
+   12  sh shellscript.sh
+   13  ./shellscript.sh
+   14  chmod 455 shellscript.sh
+   15  ./shellscript.sh
+   16  chmod 544 shellscript.sh
+   17  shellscript.sh
+   18  ./shellscript.sh
+   19  history
+ubuntu@ip:~$ mkdir myfirstfolder
+ubuntu@ip:~$ ls -ltr
+total 8
+-rw-rw-r-- 1 ubuntu ubuntu    0 Feb  8 23:58 shellscript1.sh
+-r-xr--r-- 1 ubuntu ubuntu   37 Feb  9 00:32 shellscript.sh
+drwxrwxr-x 2 ubuntu ubuntu 4096 Feb  9 00:35 myfirstfolder
+ubuntu@ip:~$ pwd
+/home/ubuntu
+ubuntu@ip:~$ cd myfirstfolder
+ubuntu@ip:~/myfirstfolder$ pwd
+/home/ubuntu/myfirstfolder
+ubuntu@:~/myfirstfolder$ cd ..
+ubuntu@:~$ pwd
+/home/ubuntu
+ubuntu@:~$ vim shellscript.sh
+ubuntu@:~$ chmod 777 shellscript.sh
+ubuntu@:~$ ./shellscript.sh
+ubuntu@2:~$ ls -ltr
+total 12
+-rw-rw-r-- 1 ubuntu ubuntu    0 Feb  8 23:58 shellscript1.sh
+drwxrwxr-x 2 ubuntu ubuntu 4096 Feb  9 00:35 myfirstfolder
+-rwxrwxrwx 1 ubuntu ubuntu  253 Feb  9 00:42 shellscript.sh
+drwxrwxr-x 2 ubuntu ubuntu 4096 Feb  9 00:42 shellscript
+ubuntu@ip:~$ vim shellscript.sh
+ubuntu@ip:~$ cd shellscript
+ubuntu@ip:~/shellscript$ ls
+script1  script2
+ubuntu@ip:~/shellscript$ cd ..
+ubuntu@ip:~$ pwd
+/home/ubuntu
+ubuntu@ip:~$ ls
+myfirstfolder  shellscript  shellscript.sh  shellscript1.sh
+ubuntu@ip:~$ rm -rf myfirstfolder
+ubuntu@ip:~$ ls
+shellscript  shellscript.sh  shellscript1.sh
